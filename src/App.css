@@ -1,38 +1,260 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fc;
+  color: #333;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.components {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: rgb(114, 114, 165);
+  color: #e3f2fd;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: flex-en;
+  align-items: center;
+  gap: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+h1 {
+  font-size: 36px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+  background: linear-gradient(to right, #4c5c68, #6f7d88);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+button.cta {
+  background-color: #2a9d8f;
+  color: white;
+  font-size: 18px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.cta:hover {
+  background-color: #21867b;
+}
+
+.property-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 20px;
+  padding: 20px 0;
+}
+
+.property-list p {
+  font-size: 18px;
+  color: #666;
+  margin-top: 40px;
+}
+
+.property-card {
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid black;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.card-light {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-light:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card-dark {
+  background-color: #2d3a4b;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-dark:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.card-green {
+  background-color: #f1f9f1;
+  border: 2px solid #2a9d8f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-green:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-blue {
+  background-color: #e3f2fd;
+  border: 2px solid #1565c0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-blue:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.property-card h2 {
+  font-size: 22px;
+  margin: 20px 0;
+  padding: 0 20px;
+  font-weight: bold;
+}
+
+.property-card p {
+  font-size: 16px;
+  color: #888;
+  margin: 0 20px;
+}
+
+.property-card .price {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 20px 10px;
+}
+
+.property-card img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.property-card:hover img {
+  transform: scale(0.8);
+}
+
+.property-list p {
+  font-size: 18px;
+  color: #666;
+  margin-top: 40px;
+}
+
+.property-card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.property-card:hover h2,
+.property-card:hover .price {
+  transform: translateY(-5px);
+}
+
+.property-list .property-card:first-child {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+@media (max-width: 768px) {
+  .property-list {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .property-card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .property-card h2 {
+    font-size: 18px;
+  }
+
+  .property-card p {
+    font-size: 14px;
+  }
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+footer a {
   color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+footer a:hover {
+  color: #2a9d8f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer p {
+  font-size: 14px;
+  margin-top: 10px;
 }

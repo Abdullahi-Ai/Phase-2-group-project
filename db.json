@@ -1,0 +1,92 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "title": "Modern Apartment in Westlands",
+      "price": 120000,
+      "location": "Westlands, Nairobi",
+      "status": "For Sale",
+      "type": "Apartment",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 2,
+      "title": "Luxury Villa in Runda",
+      "price": 38000000,
+      "location": "Runda, Nairobi",
+      "status": "For Sale",
+      "type": "Villa",
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "image": "https://snoopy.archdaily.com/images/archdaily/media/images/67fe/4919/5de4/7f00/017f/89d4/medium_jpg/003.jpg?1744718134&format=webp&width=680&height=516&crop=true"
+    },
+    {
+      "id": 3,
+      "title": "One Bedroom House for Rent",
+      "price": 25000,
+      "location": "Kilimani, Nairobi",
+      "status": "For Rent",
+      "type": "House",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "image": "https://ssl.cdn-redfin.com/photo/86/islphoto/191/genIslnoResize.6818191_6.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Furnished Studio Apartment",
+      "price": 18000,
+      "location": "Ngong Road, Nairobi",
+      "status": "For Rent",
+      "type": "Studio",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRTIydYp2eT2UjuAYWsvrBGkse68QLM25IfA&s"
+    },
+    {
+      "id": 5,
+      "title": "2-Bedroom Apartment in Lavington",
+      "price": 470000,
+      "location": "Lavington, Nairobi",
+      "status": "For Rent",
+      "type": "Apartment",
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "image": "https://pix10.agoda.net/hotelImages/616/6165914/6165914_18112615290069931789.jpg?ca=7&ce=1&s=414x232&ar=16x9"
+    },
+    {
+      "id": 6,
+      "title": "Spacious 3-Bedroom House in Karen",
+      "price": 60000,
+      "location": "Karen, Nairobi",
+      "status": "For Rent",
+      "type": "House",
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEJ4wgtSTadGSd8yWL_yxLrJpEQl8lNC1GAA&s"
+    },
+    {
+      "id": 7,
+      "title": "Penthouse with City View",
+      "price": 75000,
+      "location": "Upper Hill, Nairobi",
+      "status": "For Sale",
+      "type": "Penthouse",
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "image": "https://coralpi.com/wp-content/uploads/2025/04/GHC-22-525x328.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Studio Apartment in Kilimani",
+      "price": 150000,
+      "location": "Kilimani, Nairobi",
+      "status": "For Rent",
+      "type": "Studio",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtiJaA50weUSadNrnypPLgKjf0298hmfAaBQ&s"
+    }
+  ]
+}
