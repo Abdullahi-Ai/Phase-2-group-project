@@ -1,44 +1,56 @@
 import React from 'react';
 
 const Home = ({ properties, searchTerm, setSearchTerm }) => {
+  // Log fetched properties for debugging
+  console.log("Fetched properties:", properties);
+
   // Filter properties based on search term
   const filteredProperties = properties.filter(
     (property) =>
-      property.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      property.location.toLowerCase().includes(searchTerm.toLowerCase())
+      property.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      property.location?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <div className="home-container">
-      <h2>Welcome to Our Real Estate Website</h2>
-      <p>Find your dream home with us.</p>
+      <h1>Find your dream home with us.</h1>
 
       {/* Search Bar */}
       <div className="search-container">
         <input
           type="text"
           placeholder="Search by title or location"
-          value={searchTerm} 
-          onChange={(e) => setSearchTerm(e.target.value)} // Update search term on input change
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
           className="search-input"
         />
       </div>
 
-      {/* Display filtered properties */}
+      {/* Property List */}
       <div className="property-list">
         {filteredProperties.length > 0 ? (
-          filteredProperties.map((property, index) => (
-            <div key={index} className="property-card">
+          filteredProperties.map((property) => (
+            <div key={property.id} className="property-card">
               <h3>{property.title}</h3>
               <p>{property.location}</p>
-              <p>Price: {property.price}</p>
-              {property.image && (
-                <img src={property.image} alt={property.title} width="200" />
+              <p>Price: KES {property.price}</p>
+              {property.image ? (
+                <img
+                  src={property.image}
+                  alt={property.title}
+                  width="200"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "/images/fallback.jpg"; 
+                  }}
+                />
+              ) : (
+                <p>No image available</p>
               )}
             </div>
           ))
         ) : (
-          <p>No properties found</p>
+          <p>No properties found.</p>
         )}
       </div>
     </div>

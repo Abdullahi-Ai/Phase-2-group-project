@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
-import "./App.css"
-import Home from './components/Home';
-import About from './components/About';
-import Services from './components/Services';
-import Contact from './components/Contact';
+import { Routes, Route, Link } from "react-router-dom";
+import "./App.css";
+import Home from "./components/Home";
+import About from "./components/About";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
+import SignUp from "./components/SignUp";
+import Login from "./components/Login";
 
 function App() {
   const [properties, setProperties] = useState([]);
-  const [searchTerm, setSearchTerm] = useState(""); // Add searchTerm state
+  const [searchTerm, setSearchTerm] = useState("");
 
   const fetchProperties = async () => {
     try {
@@ -28,21 +31,32 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Real Estate</h1>
-      
-      {/* Render the Home component and pass properties and searchTerm */}
-      <Home 
-        properties={properties}
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-      />
+      <nav className="navbar">
+        <h2 className="primedwell">PrimeDwell</h2>
+        <div className="navlinks">
+          <Link to="/">Home</Link>
+          <Link to="/Login">Login</Link>
+          <Link to="/SignUp">SignUp</Link>
+        </div>
+      </nav>
 
-      {/* Render other components */}
-      <div className="components"> 
-        <About /> {/* This will display your home page content */}
-        <Services /> {/* This will display your home Services content */}
-        <Contact /> {/* This will display your home Services content */}
-      </div>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              properties={properties}
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
+            />
+          }
+        />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </div>
   );
 }

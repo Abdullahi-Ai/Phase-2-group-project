@@ -255,3 +255,16 @@ footer p {
   font-size: 14px;
   margin-top: 10px;
 }
+
+.navlinks{
+  display:flex;
+ margin-left: 500px;
+  gap:60px;
+  
+}
+.primedwell{
+  color:white;
+  text-align: center;
+  font-size: xx-large;
+  margin-left: 800px;
+}

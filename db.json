@@ -14,7 +14,7 @@
     {
       "id": 2,
       "title": "Luxury Villa in Runda",
-      "price": 38000000,
+      "price": 750000,
       "location": "Runda, Nairobi",
       "status": "For Sale",
       "type": "Villa",
@@ -25,7 +25,7 @@
     {
       "id": 3,
       "title": "One Bedroom House for Rent",
-      "price": 25000,
+      "price": 95000,
       "location": "Kilimani, Nairobi",
       "status": "For Rent",
       "type": "House",
@@ -36,7 +36,7 @@
     {
       "id": 4,
       "title": "Furnished Studio Apartment",
-      "price": 18000,
+      "price": 75000,
       "location": "Ngong Road, Nairobi",
       "status": "For Rent",
       "type": "Studio",
@@ -69,7 +69,7 @@
     {
       "id": 7,
       "title": "Penthouse with City View",
-      "price": 75000,
+      "price": 750000,
       "location": "Upper Hill, Nairobi",
       "status": "For Sale",
       "type": "Penthouse",
@@ -87,6 +87,28 @@
       "bedrooms": 1,
       "bathrooms": 1,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtiJaA50weUSadNrnypPLgKjf0298hmfAaBQ&s"
+    }, 
+    {
+      "id": 9,
+      "title": "Elegant Mansion in Muthaiga",
+      "price": 95000000,
+      "location": "Muthaiga, Nairobi",
+      "status": "For Sale",
+      "type": "Mansion",
+      "bedrooms": 6,
+      "bathrooms": 5,
+      "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": 10,
+      "title": "Modern Bedsitter in South B",
+      "price": 75000,
+      "location": "South B, Nairobi",
+      "status": "For Rent",
+      "type": "Bedsitter",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOnxUPKDURmBtXB1N-G2U_nI1Dz3PbcZxVKA&s"
     }
   ]
 }
