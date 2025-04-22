@@ -20,9 +20,6 @@ body {
   color: #e3f2fd;
 }
 
-.content {
-  flex-grow: 1;
-}
 
 .navbar {
   background-color: #333;
