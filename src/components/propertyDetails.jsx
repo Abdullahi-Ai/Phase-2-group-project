@@ -1,8 +1,8 @@
 import React from "react";
-import { useParams } from "react-router-dom"; // Assuming you're using React Router for navigation
+import { useParams } from "react-router-dom";
 
 function PropertyDetails({ properties }) {
-  const { id } = useParams(); // Getting the property ID from the URL
+  const { id } = useParams(); 
   const property = properties.find((property) => property.id === parseInt(id));
 
   if (!property) {

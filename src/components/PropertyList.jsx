@@ -1,4 +1,4 @@
-// src/components/PropertyList.jsx
+
 import React from 'react';
 function PropertyList({ properties }) {
   return (
