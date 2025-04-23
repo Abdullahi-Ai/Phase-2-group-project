@@ -1,16 +1,12 @@
 import React from 'react';
 
 const Home = ({ properties, searchTerm, setSearchTerm }) => {
-  // Log fetched properties for debugging
   console.log("Fetched properties:", properties);
-
-  // Filter properties based on search term
   const filteredProperties = properties.filter(
     (property) =>
       property.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       property.location?.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
   return (
     <div className="home-container">
       <h1>Find your dream home with us.</h1>
