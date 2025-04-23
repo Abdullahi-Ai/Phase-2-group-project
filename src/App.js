@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <nav className="navbar">
-        <h2 className="primedwell">PrimeDwell</h2>
+        <h2 className="primedwell">NestQuest</h2>
         <div className="navlinks">
           <Link to="/">Home</Link>
           <Link to="/Login">Login</Link>
