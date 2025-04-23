@@ -1,3 +1,4 @@
+import React from "react";
 import { useNavigate } from 'react-router-dom';
 
 const Home = ({ properties, searchTerm, setSearchTerm }) => {
@@ -62,6 +63,40 @@ const Home = ({ properties, searchTerm, setSearchTerm }) => {
           <p>No properties found.</p>
         )}
       </div>
+
+      {/* Footer */}
+      <footer className="footer-container">
+        <div className="footer-content">
+          <div className="footer-about">
+            <h4>About Us</h4>
+            <p>
+              NestQuest is a leading real estate platform connecting you to
+              dream homes in prime locations. We ensure a smooth and seamless
+              property booking experience for all our users.
+            </p>
+          </div>
+
+          <div className="footer-contact">
+            <h4>Contact Details</h4>
+            <p>Email: support@nestquest.com</p>
+            <p>Phone: +254 700 000 000</p>
+          </div>
+
+          <div className="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/services">Services</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>&copy; 2025 NestQuest. All Rights Reserved.</p>
+        </div>
+      </footer>
+
     </div>
   );
 };

@@ -45,7 +45,11 @@ body {
   color: #ffd700;
   text-decoration: underline;
 }
-
+.search-container{
+  width: 80%;
+  border-radius: 15px;
+  margin-left: 800px;
+}
 .footer {
   text-align: center;
   padding: 20px;
@@ -254,6 +258,72 @@ footer a:hover {
 footer p {
   font-size: 14px;
   margin-top: 10px;
+}
+
+.footer-container {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.footer-about,
+.footer-contact,
+.footer-links {
+  flex: 1;
+  min-width: 200px;
+  margin-right: 20px;
+}
+
+.footer-about h4,
+.footer-contact h4,
+.footer-links h4 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.footer-about p,
+.footer-contact p,
+.footer-links ul {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: #5c6bc0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9em;
+  padding-top: 10px;
+  border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+  margin: 0;
 }
 
 .navlinks{
