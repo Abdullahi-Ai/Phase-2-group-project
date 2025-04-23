@@ -16,7 +16,7 @@
       "title": "Luxury Villa in Runda",
       "price": 750000,
       "location": "Runda, Nairobi",
-      "status": "For Sale",
+      "status": "For Rent",
       "type": "Villa",
       "bedrooms": 5,
       "bathrooms": 4,
@@ -45,13 +45,12 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRTIydYp2eT2UjuAYWsvrBGkse68QLM25IfA&s"
     },
     {
-      "id": 5,
-      "title": "2-Bedroom Apartment in Lavington",
       "price": 470000,
       "location": "Lavington, Nairobi",
       "status": "For Rent",
       "type": "Apartment",
       "bedrooms": 2,
+      {
       "bathrooms": 2,
       "image": "https://pix10.agoda.net/hotelImages/616/6165914/6165914_18112615290069931789.jpg?ca=7&ce=1&s=414x232&ar=16x9"
     },
@@ -109,6 +108,68 @@
       "bedrooms": 1,
       "bathrooms": 1,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOnxUPKDURmBtXB1N-G2U_nI1Dz3PbcZxVKA&s"
-    }
+      },
+      {
+        "id": 11,
+        "title": "Furnished Studio Apartment",
+        "price": 950000,
+        "location": "state house Road",
+        "status": "For Rent",
+        "type": "Mansion",
+        "bedrooms": 3,
+        "bathrooms": 5,
+        "image": "https://res.cloudinary.com/hao-finder/image/upload/c_fill,w_1000/properties/FB_IMG_1679244306176_bbjymw"
+      },
+      {
+        "id": 12,
+        "title": "Modern Apartment in state house",
+        "price": 85000,
+        "location": "stae House Road",
+        "status":"For Rent",
+        "type": "Mansion",
+        "bedrooms": 5,
+        "bathrooms": 5,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnytL5iggwU9ujVJwOC7Z4m83WCGLg3h6wMA&s"
+
+      },
+      {
+        "id": 13,
+        "title": "Modern Apartment in state house",
+        "price": 85000,
+        "location": "stae House Road",
+        "status":"For Rent",
+        "type": "Mansion",
+        "bedrooms": 5,
+        "bathrooms": 5,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHz1SxhDANuP4jm0F29jio_iaDMLY66evkvg&s"
+
+      },
+      {
+        "id": 14,
+        "title": "Modern Apartment in state house",
+        "price": 85000,
+        "location": "stae House Road",
+        "status":"For Rent",
+        "type": "Mansion",
+        "bedrooms": 5,
+        "bathrooms": 5,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRayIsTwQKyYFSkhOGJZHJfbLEZZiILjAT6Hw&s"
+
+
+      },
+      {
+        "id": 15,
+        "title": "Modern Apartment in state house",
+        "price": 85000,
+        "location": "stae House Road",
+        "status":"For Rent",
+        "type": "Mansion",
+        "bedrooms": 5,
+        "bathrooms": 5,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJPom51epZe6hdUf5vlOJ1xXNxT9isx-ODIA&s"
+
+
+      }
+    
   ]
 }
