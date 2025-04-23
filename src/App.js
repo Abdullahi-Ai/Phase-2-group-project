@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -7,10 +7,12 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
+import Booking from "./components/Booking";
 
 function App() {
   const [properties, setProperties] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
   const fetchProperties = async () => {
     try {
@@ -29,14 +31,26 @@ function App() {
     fetchProperties();
   }, []);
 
+  const isLoggedIn = localStorage.getItem("loggedInUser");
+
   return (
     <div className="App">
       <nav className="navbar">
         <h2 className="primedwell">NestQuest</h2>
         <div className="navlinks">
           <Link to="/">Home</Link>
-          <Link to="/Login">Login</Link>
-          <Link to="/SignUp">SignUp</Link>
+          {!isLoggedIn && <Link to="/Login">Login</Link>}
+          {!isLoggedIn && <Link to="/SignUp">SignUp</Link>}
+          {isLoggedIn && (
+            <button
+              onClick={() => {
+                localStorage.removeItem("loggedInUser");
+                navigate("/Login");
+              }}
+            >
+              Logout
+            </button>
+          )}
         </div>
       </nav>
 
@@ -56,6 +70,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
+        {/* Make sure to match the correct route path */}
+        <Route path="/booking/:id" element={<Booking properties={properties} />} />
       </Routes>
     </div>
   );

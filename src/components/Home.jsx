@@ -1,17 +1,29 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Home = ({ properties, searchTerm, setSearchTerm }) => {
-  console.log("Fetched properties:", properties);
+  const navigate = useNavigate();
+  const isLoggedIn = localStorage.getItem("loggedInUser");
+
+  const handleBook = (property) => {
+    if (isLoggedIn) {
+      navigate(`/booking/${property.id}`);
+    } else {
+      alert("Please log in to book this property.");
+      navigate("/Login");
+    }
+  };
+
   const filteredProperties = properties.filter(
     (property) =>
       property.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       property.location?.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
   return (
     <div className="home-container">
-      <h1>Find your dream home with us.</h1>
+      <h1>Find your dream home with us</h1>
 
-      {/* Search Bar */}
+      {/* Search */}
       <div className="search-container">
         <input
           type="text"
@@ -30,19 +42,20 @@ const Home = ({ properties, searchTerm, setSearchTerm }) => {
               <h3>{property.title}</h3>
               <p>{property.location}</p>
               <p>Price: KES {property.price}</p>
-              {property.image ? (
-                <img
-                  src={property.image}
-                  alt={property.title}
-                  width="200"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = "/images/fallback.jpg"; 
-                  }}
-                />
-              ) : (
-                <p>No image available</p>
-              )}
+
+              <img
+                src={property.image || "/images/fallback.jpg"}
+                alt={property.title}
+                className="property-image"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = "/images/fallback.jpg";
+                }}
+              />
+
+              <button onClick={() => handleBook(property)} className="book-btn">
+                Book Now
+              </button>
             </div>
           ))
         ) : (
