@@ -5,12 +5,28 @@ const Home = ({ properties, searchTerm, setSearchTerm }) => {
   const navigate = useNavigate();
   const isLoggedIn = localStorage.getItem("loggedInUser");
 
-  const handleBook = (property) => {
-    if (isLoggedIn) {
-      navigate(`/booking/${property.id}`);
-    } else {
+  const handleBook = async (property) => {
+    if (!isLoggedIn) {
       alert("Please log in to book this property.");
       navigate("/Login");
+      return;
+    }
+    if (property.booked) {
+      alert("Sorry, this property is already booked.");
+      return;
+    }
+
+    try {
+      await fetch(`http://localhost:3000/properties/${property.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ booked: true }),
+      });
+      navigate(`/booking/${property.id}`);
+    } catch (error) {
+      console.error("Error booking property:", error);
     }
   };
 
@@ -54,8 +70,12 @@ const Home = ({ properties, searchTerm, setSearchTerm }) => {
                 }}
               />
 
-              <button onClick={() => handleBook(property)} className="book-btn">
-                Book Now
+              <button
+                onClick={() => handleBook(property)}
+                className="book-btn"
+                disabled={property.booked} // Disable if already booked
+              >
+                {property.booked ? "Already Booked" : "Book Now"}
               </button>
             </div>
           ))
@@ -91,14 +111,22 @@ const Home = ({ properties, searchTerm, setSearchTerm }) => {
             </ul>
           </div>
         </div>
-        <p>0ur main branch office</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.749647552659!2d36.8385488759022!3d-1.3261514986612715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1150747fb5e7%3A0xf871ccee8221c8ff!2sReal%20Estate%20-%20South%20C!5e0!3m2!1sen!2ske!4v1745481228186!5m2!1sen!2ske" 
-        width="600" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p>Our main branch office</p>
+        <iframe 
+          title="Main office location on Google Maps"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.749647552659!2d36.8385488759022!3d-1.3261514986612715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1150747fb5e7%3A0xf871ccee8221c8ff!2sReal%20Estate%20-%20South%20C!5e0!3m2!1sen!2ske!4v1745481228186!5m2!1sen!2ske" 
+          width="600" 
+          height="450" 
+          style={{ border: 0 }} 
+          allowFullScreen="" 
+          loading="lazy" 
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+
         <div className="footer-bottom">
           <p>&copy; 2025 NestQuest. All Rights Reserved.</p>
         </div>
       </footer>
-
     </div>
   );
 };
