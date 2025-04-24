@@ -91,7 +91,9 @@ const Home = ({ properties, searchTerm, setSearchTerm }) => {
             </ul>
           </div>
         </div>
-
+        <p>0ur main branch office</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.749647552659!2d36.8385488759022!3d-1.3261514986612715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1150747fb5e7%3A0xf871ccee8221c8ff!2sReal%20Estate%20-%20South%20C!5e0!3m2!1sen!2ske!4v1745481228186!5m2!1sen!2ske" 
+        width="600" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div className="footer-bottom">
           <p>&copy; 2025 NestQuest. All Rights Reserved.</p>
         </div>

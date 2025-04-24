@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+##NestQuest Real Estate Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##NestQuest is a dynamic real estate platform built with React. It allows users to buy, sell, or rent properties, providing an intuitive interface for searching, viewing, and managing property listings. The website leverages a property API to display up-to-date listings, and includes features for user authentication, search filters, and property details.
 
-## Available Scripts
+##Features
 
-In the project directory, you can run:
+##Property Listings: View detailed property listings with images, prices, and descriptions.
 
-### `npm start`
+Search Filters: Filter properties based on location, price range, and other criteria.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Buy, Sell, Rent Options: Users can explore properties available for buying, selling, or renting.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+User Authentication: Secure login and sign-up functionalities to manage user accounts.
 
-### `npm test`
+Property Details: Each property listing includes essential details such as address, price, amenities, and contact information.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##Technologies Used
 
-### `npm run build`
+##Frontend: React, JSX, CSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##State Management: React Hooks
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##API: Fetching property data from a backend API (mocked with db.json)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##Authentication: User login and sign-up handled with local JSON server
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## git clone https://github.com/your-username/nestquest.git
+## cd nestquest
+## npm install
+## npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Folder Structure
+/public
+  /assets
+  index.html
+/src
+  /components
+    Header.jsx
+    PropertyCard.jsx
+    PropertyList.jsx
+    PropertyFilter.jsx
+    Login.jsx
+    SignUp.jsx
+  /api
+    /db.json (Mock API for properties and user authentication)
+  App.jsx
+  index.js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  ## License
+  This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Learn More
+  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
