@@ -52,6 +52,9 @@ Property Details: Each property listing includes essential details such as addre
   ## License
   This project is licensed under the MIT License - see the LICENSE file for details.
 
+  ## Diploy Link 
+  https://phase-2-group-p-git-e935c7-abdullahi-ibrahims-projects-2c4bd442.vercel.app/
+
   
 
 
