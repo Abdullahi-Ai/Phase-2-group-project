@@ -5,7 +5,7 @@ const Buy = () => {
 
   const fetchProperties = async () => {
     try {
-      const res = await fetch("http://localhost:3001/properties");
+      const res = await fetch("http://localhost:3000/properties");
       const data = await res.json();
       setProperties(data);
     } catch (err) {

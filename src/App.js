@@ -16,7 +16,7 @@ function App() {
 
   const fetchProperties = async () => {
     try {
-      const response = await fetch("http://localhost:3001/properties");
+      const response = await fetch("http://localhost:3000/properties");
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }

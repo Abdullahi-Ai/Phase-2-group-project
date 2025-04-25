@@ -73,7 +73,7 @@ const Home = ({ properties, searchTerm, setSearchTerm }) => {
               <button
                 onClick={() => handleBook(property)}
                 className="book-btn"
-                disabled={property.booked} // Disable if already booked
+                disabled={property.booked} 
               >
                 {property.booked ? "Already Booked" : "Book Now"}
               </button>
