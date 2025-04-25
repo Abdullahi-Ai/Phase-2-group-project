@@ -17,7 +17,7 @@ const Home = ({ properties, searchTerm, setSearchTerm }) => {
     }
 
     try {
-      await fetch(`http://localhost:3000/properties/${property.id}`, {
+      await fetch(`https://real-estate-json-server.onrender.com/api/properties/${property.id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

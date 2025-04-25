@@ -14,7 +14,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3000/users");
+      const response = await fetch("https://real-estate-json-server.onrender.com/api/users");
       if (!response.ok) {
         throw new Error("Failed to fetch users");
       }

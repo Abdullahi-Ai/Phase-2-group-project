@@ -12,7 +12,7 @@ const SignUp = () => {
     setSignUpSuccess('');
 
     try {
-      const response = await fetch("http://localhost:3000/users");
+      const response = await fetch("https://real-estate-json-server.onrender.com/api/users");
       if (!response.ok) {
         throw new Error("Failed to fetch users");
       }
@@ -25,7 +25,7 @@ const SignUp = () => {
         return;
       }
       const newUser = { email, password };
-      const postResponse = await fetch("http://localhost:3000/users", {
+      const postResponse = await fetch("https://real-estate-json-server.onrender.com/api/users", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
